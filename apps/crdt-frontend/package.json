@@ -15,13 +15,16 @@
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
+    "@hocuspocus/provider": "^1.0.0",
     "body-parser": "^1.20.0",
     "dotenv": "^16.0.1",
     "esno": "^0.16.3",
     "express": "^4.18.1",
     "pinia": "^2.0.16",
     "vue": "^3.2.37",
-    "vue-router": "^4.1.2"
+    "vue-router": "^4.1.2",
+    "y-websocket": "^1.4.5",
+    "yjs": "^13.5.44"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",

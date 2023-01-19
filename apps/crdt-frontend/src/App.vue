@@ -1,8 +1,33 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue'
 import templateComponent from './views/template/template'
+import * as Y from 'yjs'
+import { HocuspocusCloudProvider } from '@hocuspocus/provider'
+
+// Connect it to the backend
+const provider = new HocuspocusCloudProvider({
+  url: 'ws://0.0.0.0:80',
+  name: 'example-document',
+  key: 'required-crdt-key',
+})
+
+// Define `tasks` as an Array
+const tasks = provider.document.getArray('tasks')
+
+// Listen for changes
+tasks.observe(() => {
+  console.log('tasks were modified')
+})
+
+
+
+onMounted(() => {
+// Add a new task
+  tasks.push(['buy milk'])
+})
 </script>
 
 <template>
