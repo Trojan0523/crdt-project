@@ -1,5 +1,4 @@
 packages:
-  - 'packages/**'
-  - 'shared/**'
-  - 'apps/**'
-  - 'backend/*'
+  - "packages/**"
+  - "shared/**"
+  - "apps/**"
