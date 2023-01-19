@@ -2,13 +2,16 @@
  * @Author: BuXiongYu
  * @Date: 2023-01-19 11:00:01
  * @LastEditors: BuXiongYu
- * @LastEditTime: 2023-01-19 11:43:38
+ * @LastEditTime: 2023-01-19 17:08:26
  * @Description: start up function
  */
+import { Server } from '@hocuspocus/server'
 
 export const bootstrap = () => {
-  // eslint-disable-next-line no-console
-  console.log('1111')
+  const server = Server.configure({
+    port: 80,
+  })
+  server.listen()
 }
 
 bootstrap()
