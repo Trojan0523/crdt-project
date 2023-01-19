@@ -3,7 +3,10 @@ lockfileVersion: 5.4
 importers:
 
   .:
-    specifiers: {}
+    specifiers:
+      tsx: ^3.12.2
+    dependencies:
+      tsx: 3.12.2
 
   apps/crdt-frontend:
     specifiers:

@@ -2,4 +2,4 @@ packages:
   - 'packages/**'
   - 'shared/**'
   - 'apps/**'
-  - 'backend/**'
+  - 'backend/*'
